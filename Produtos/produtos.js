@@ -20,6 +20,12 @@ function menu_dropdown() {
     }
 }
 
+function menu() {
+    x.parentNode.replaceChild(y, x)
+    count = 1
+    console.log(2)
+}
+
 
 var nome_relatorio = 'Produtos'  /* Exportar em PDF */
 
