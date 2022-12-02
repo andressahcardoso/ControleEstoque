@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <link rel="icon" href="img/file-earmark-text.svg"/>
+    <title>Adicionar Armário</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel='stylesheet' type='text/css' media='screen' href='adicionar_produtos.css'> 
+</head>
+<body> 
+
+       <!-- Modal - Editar Usuário -->
+
+       <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight1" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasRightLabel">Usuário</h5>
+            <button type="button" class="btn-close  btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <hr class="linha">
+        <div class="offcanvas-body">
+            <div class="mb-3">
+                <label for="idarma" class="form-label">Nome</label>
+                <input type="idarmario" class="form-control" id="idarmario">
+              </div>
+            <div class="mb-3">
+                <label for="idarma" class="form-label">Alterar E-mail</label>
+                <input type="idarmario" class="form-control" id="idarmario">
+              </div>
+
+            <div class="mb-3">
+                <label for="responsavel" class="form-label">Senha Antiga</label>
+                <input type="responsavel" class="form-control" id="responsavel">
+            </div>
+                 
+              <div class="mb-3">
+                  <label for="descricao" class="form-label">Alterar Senha</label>
+                  <input type="descricao" class="form-control" id="descricao">
+              </div>
+      
+              <div class="mb-3">
+                  <label for="responsavel" class="form-label">Confirmar nova senha</label>
+                  <input type="responsavel" class="form-control" id="responsavel">
+              </div>
+      
+              
+              <div id="end">
+                <button type="aplicar" class="btn-primary excluir_conta" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal1">Excluir Conta</button>
+              <button type="aplicar" class="btn-primary">Salvar</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal - Excluir Conta  -->
+
+    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">ATENÇÃO</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Sua conta será excluída. Deseja continuar?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-child" data-bs-dismiss="modal">Cancelar</button>
+
+              <button type="button" class="btn btn-child" data-bs-dismiss="modal" onclick="location.href='../index.html'">Prosseguir</button>
+              
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+
+    <!-- Modal - Sair da Conta -->
+
+    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">ATENÇÃO</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Você está saindo da sua conta. Deseja continuar?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-child" data-bs-dismiss="modal">Cancelar</button>
+
+              <button type="button" class="btn btn-child" data-bs-dismiss="modal" onclick="location.href='../index.html'">Prosseguir</button>
+              
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <section class='grid-container'>
+        <div class="sidebar">
+            <div class="dropdown">
+
+                <button onclick="menu_dropdown()" id='menu_dropdown' class="btn btn-secondary" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i id='icone_menu' class="bi bi-list"></i> <!--Ícone do menu-->
+                    <i onload="teste()" id='icone_menu_exit' class="bi bi-x-lg"></i> <!--Ícone do menu exit-->
+                </button>
+
+                <ul id='menu_itens' class="dropdown-menu">
+                    <li><a id='menu_houver' class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal2"><i class="bi bi-box-arrow-right"></i></a></li>
+                    <li><a id='menu_houver' class="dropdown-item" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight1"><i class="bi bi-person-circle"></i></a></li>
+                    <li><a id='menu_houver' class="dropdown-item" href="adicionar_item_relatorios.html"><i class="bi bi-plus-circle"></i></a></li>
+                    <li><a id='menu_houver' class="dropdown-item" href="abrir_relatorios.html"><i class="bi bi-file-earmark-text"></i></a></li>
+                </ul>
+
+            </div>
+        </div>
+
+        <div class="header">
+            <h1> Adicionar produtos </h1>
+
+            <div class="botoes">
+                <button id="btn-save"> Salvar </button>
+                <button id="btn-cancel"> Cancelar </button>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="caixa_input">
+
+                <div class="coluna-esq"> 
+                    <input type="text" placeholder="Digite o nome do produto"/>
+
+                    <select class="select">
+                        <option id="disabled" selected disabled> Selecione o n° de patrimônio </option>
+                        <option value="1"> n° 1089 </option>
+                        <option value="2"> n° 1959 </option>
+                        <option value="3"> n° 2630 </option>
+                    </select>
+
+                    <select class="select">
+                        <option id="disabled" selected disabled> Selecione o n° do armário </option>
+                        <option value="1"> n° 1089 </option>
+                        <option value="2"> n° 1959 </option>
+                        <option value="3"> n° 2630 </option>
+                    </select>
+
+                    <select class="select">
+                        <option id="disabled" selected disabled> Selecione uma categoria</option>
+                        <option value="1"> n° 1089 </option>
+                        <option value="2"> n° 1959 </option>
+                        <option value="3"> n° 2630 </option>
+                    </select>
+
+                    <select class="select">
+                        <option id="disabled" selected disabled> Selecione a marca </option>
+                        <option value="1"> n° 1089 </option>
+                        <option value="2"> n° 1959 </option>
+                        <option value="3"> n° 2630 </option>
+                    </select>
+                
+                </div>  
+                    
+        
+                <div class="coluna-dir"> 
+                   
+
+                    <div class="qtd">
+
+                        <label for="qtd-prod"> Quantidade: </label>
+    
+                        <section>
+    
+                            <button type="button" id="menos" onclick="less(0); return false;"><i class="bi bi-caret-left-fill"></i></button> 
+                            &nbsp; 
+                            <input type="number" id="qtd-prod" placeholder="0">
+                            &nbsp; 
+                            <button type="button" id="mais" onclick="more(10); return false;"><i class="bi bi-caret-right-fill"></i></button>
+    
+                        </section>
+                    </div>
+                    
+                    
+                    <div class="qtd" >
+                        <label for="data-val"> Validade: </label>
+                        <input type="date" class="select_val"/>
+                    </div>
+
+                    <div class="input_2">
+                        <input type="text" class="input" placeholder="Digite o nome do responsável"/>
+                        <input type="text" class="input_descricao" placeholder="Descrição"/>
+                    </div>
+                 
+                </div>  
+            </div>  
+        </div>
+
+        <div class="footer">
+            <div class="barra_low_laranja"></div>
+            <div class="barra_low_azul"></div>
+        </div>
+
+    </section>
+
+    <script src="produtos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    
+</body>
+</html>

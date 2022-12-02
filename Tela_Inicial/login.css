@@ -1,0 +1,169 @@
+* {
+    margin: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 5fr 1fr 1fr;
+    grid-template-areas: 'barra_top_laranja container barra_low_laranja barra_low_azul';
+    color: black;
+    display: inline-block;
+    width: 100%;
+}
+
+.barra_top_laranja {
+    grid-area: barra_top_laranja;
+    background-color: rgba(253, 126, 20, 1);
+    height: 4vh;
+}
+
+.container {
+    grid-area: container;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 7.5vh;
+}
+
+.barra_low_laranja {
+    grid-area: barra_low_laranja;
+    background-color: rgba(253, 126, 20, 1);
+    height: 4vh;
+}
+
+.barra_low_azul {
+    grid-area: barra_low_azul;
+    background-color: rgb(0, 57, 123);
+    height: 6vh; 
+}
+
+.footer {
+    position: absolute; 
+    width: 100%; 
+    bottom: 0;
+}
+
+
+/* Caixa de Texto */
+
+.caixa {
+    width: 100vh;
+    height: 70vh;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.box_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding-top: 4vh;
+}
+
+button {
+    background-color: rgb(253, 126, 20);
+    color: #ffffff;
+    width: 20%;
+    height: 8%;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Botão da Senha */
+
+.senha {
+  color:  rgb(253, 126, 20);
+  font-size: 100%;
+  text-decoration: none;
+}
+
+.form-control {
+    border-color: black solid!important;
+}
+
+.form-floating>.form-control, .form-floating>.form-control-plaintext, .form-floating>.form-select {
+    height: calc(3.5rem + 2px);
+    line-height: 1.25;
+    width: 50vh;
+    
+}
+
+/* Botão de Fechar */
+
+#fechar {
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+    color: #ffffff;
+    background-color: #0a119a;
+    box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    margin-top: -60vh;  /* ARRUMAR */
+    margin-right: -89vh;
+}
+
+
+/* Botão "Não lembro minha senha" */
+
+#button2 { 
+    color:  rgb(253, 126, 20);
+    text-decoration: none;
+    font-size: 14px;
+    margin-right: -20vh;
+    margin-top: -20px;
+    white-space: nowrap;  
+}
+
+
+.input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ 
+input {
+    width: 50%;
+    padding-top: 20%;
+    color: rgba(253, 126, 20, 1);
+    background: none;
+    border: 1px solid rgb(184, 183, 183);
+    border-radius: 5px;
+    border-collapse: separate;
+    font-size: 1rem;
+    padding: 1rem;
+    transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+} 
+
+.input-group:not(.has-validation)>.dropdown-toggle:nth-last-child(n+3), .input-group:not(.has-validation)>.form-floating:not(:last-child)>.form-control, .input-group:not(.has-validation)>.form-floating:not(:last-child)>.form-select, .input-group:not(.has-validation)>:not(:last-child):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating) {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+label {
+    position: absolute;
+    left: 28%;
+    top: -35%;
+    background-color: #ffffff;
+    font-size: 14px;
+    color: rgb(255, 172, 104);
+    pointer-events: none;
+    transform: translateY(.5rem);
+    transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid rgb(184, 183, 183);
+    border-radius: 5px;
+}

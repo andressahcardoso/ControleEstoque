@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <link rel="icon" href="img/file-earmark-text.svg"/>
+    <title>Produtos</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel='stylesheet' type='text/css' media='screen' href='produtos.css'> 
+</head>
+<body> 
+
+    <!-- Modal - Editar Usuário -->
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight1" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasRightLabel">Usuário</h5>
+            <button type="button" class="btn-close  btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <hr class="linha">
+        <div class="offcanvas-body">
+            <div class="mb-3">
+                <label for="idarma" class="form-label">Nome</label>
+                <input type="idarmario" class="form-control" id="idarmario">
+              </div>
+            <div class="mb-3">
+                <label for="idarma" class="form-label">Alterar E-mail</label>
+                <input type="idarmario" class="form-control" id="idarmario">
+              </div>
+
+            <div class="mb-3">
+                <label for="responsavel" class="form-label">Senha Antiga</label>
+                <input type="responsavel" class="form-control" id="responsavel">
+            </div>
+                 
+              <div class="mb-3">
+                  <label for="descricao" class="form-label">Alterar Senha</label>
+                  <input type="descricao" class="form-control" id="descricao">
+              </div>
+      
+              <div class="mb-3">
+                  <label for="responsavel" class="form-label">Confirmar nova senha</label>
+                  <input type="responsavel" class="form-control" id="responsavel">
+              </div>
+      
+              
+              <div id="end">
+                <button type="aplicar" class="btn-primary excluir_conta" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal1">Excluir Conta</button>
+              <button type="aplicar" class="btn-primary">Salvar</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal - Excluir Conta  -->
+
+    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">ATENÇÃO</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Sua conta será excluída. Deseja continuar?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-child" data-bs-dismiss="modal">Cancelar</button>
+
+              <button type="button" class="btn btn-child" data-bs-dismiss="modal" onclick="location.href='../index.html'">Prosseguir</button>
+              
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+    <!-- Modal - Sair da Conta -->
+
+    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">ATENÇÃO</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Você está saindo da sua conta. Deseja continuar?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-child" data-bs-dismiss="modal">Cancelar</button>
+
+              <button type="button" class="btn btn-child" data-bs-dismiss="modal" onclick="location.href='../index.html'">Prosseguir</button>
+              
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+    <!-- Modal - Excluir Produto -->
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">ATENÇÃO</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Você está excluindo um produto do estoque. Deseja continuar?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-child" data-bs-dismiss="modal">Cancelar</button>
+
+              <button type="button" class="btn btn-child" data-bs-dismiss="modal">Excluir</button>
+              
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+    <!-- Modal - Filtrar Produtos -->
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasRightLabel">Filtrar Produtos</h5>
+            <button type="button" class="btn-close  btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <hr class="linha">
+        <div class="offcanvas-body">
+            <div class="mb-3">
+                <label for="idarma" class="form-label">Nome</label>
+                <input type="idarmario" class="form-control" id="idarmario">
+              </div>
+            <div class="mb-3">
+                <label for="idarma" class="form-label">Id do armário</label>
+                <input type="idarmario" class="form-control" id="idarmario">
+              </div>
+                 
+              <div class="mb-3">
+                  <label for="descricao" class="form-label">Descrição</label>
+                  <input type="descricao" class="form-control" id="descricao">
+              </div>
+      
+              <div class="mb-3">
+                  <label for="responsavel" class="form-label">Responsável</label>
+                  <input type="responsavel" class="form-control" id="responsavel">
+              </div>
+      
+              <div class="mb-3">
+                  <label for="status" class="form-label">Status</label>
+                  <input type="status" class="form-control" id="status">
+              </div>
+              <div id="end">
+              <button type="aplicar" class="btn-primary">Aplicar</button>
+            </div>
+        </div>
+    </div>
+
+    <section class='grid-container'>
+        <div class="header">
+            <div class="alertas">
+
+                <div class="caixa-alerta">
+                    <div class="alerta" style="background-color: #FF0000;">   
+                        <i class="bi bi-exclamation-triangle"></i>
+                    </div>
+                        
+                    <div class="caixa-texto">
+                        <h4>Esgotando</h4>
+                        <p>Produtos: x/y</p>
+                    </div> 
+                </div>
+            
+                <div class="caixa-alerta">
+                    <div class="alerta" style="background-color: #FD7E14;">   
+                        <i class="bi bi-megaphone"></i>
+                    </div>
+                        
+                    <div class="caixa-texto">
+                        <h4> Danos </h4>
+                        <p> Produtos: x/y</p>
+                    </div> 
+                </div>
+            
+                <div class="caixa-alerta">
+                    <div class="alerta" style="background-color: #50DB56;">   
+                        <i class="bi bi-patch-check"></i>
+                    </div>
+                        
+                    <div class="caixa-texto">
+                        <h4>Ativos</h4>
+                        <p>Produtos: x/y</p>
+                    </div> 
+                </div>
+
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <div class="dropdown">
+
+                <button onclick="menu_dropdown()" id='menu_dropdown' class="btn btn-secondary" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i id='icone_menu' class="bi bi-list"></i> <!--Ícone do menu-->
+                    <i onload="teste()" id='icone_menu_exit' class="bi bi-x-lg"></i> <!--Ícone do menu exit-->
+                </button>
+
+                <ul id='menu_itens' class="dropdown-menu">
+                    <li><a id='menu_houver' class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal2"><i class="bi bi-box-arrow-right"></i></a></li>
+                    <li><a id='menu_houver' class="dropdown-item" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight1"><i class="bi bi-person-circle"></i></a></li>
+                    <li><a id='menu_houver' class="dropdown-item" href="adicionar_item_relatorios.html"><i class="bi bi-plus-circle"></i></a></li>
+                    <li><a id='menu_houver' class="dropdown-item" href="abrir_relatorios.html"><i class="bi bi-file-earmark-text"></i></a></li>
+                </ul>
+
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="card grid2">
+
+                <div class="title_relatorio">
+                    <p class="titulo_relatorio">Produtos</p>
+                </div>
+                
+                <div class="card-body botoes_titulo">                 
+                    <i id="icone_filtro" class="bi bi-funnel-fill" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"></i>
+                    <button onclick="PDF()" type="button" class="btn btn-outline-primary botao_PDF">Gerar PDF</button>
+                </div>
+
+            </div>
+            
+            <div class="table-responsive table-earnings table-earnings__challenge">
+                <table id='tabela' class="table table-striped"> 
+                    <thead>
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col"></th>
+                            <th scope="col"></th>
+                            <th scope="col">Núm. Património</th>
+                            <th scope="col">Id_Armário</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Descrição</th>
+                            <th scope="col">Categoria</th>
+                            <th scope="col">Marca</th>
+                            <th scope="col">Quantidade Total</th>
+                            <th scope="col">Validade</th>
+                            <th scope="col">Responsável</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th id="padding" scope="row"><i class="bi bi-circle-fill green_circle"></i></th>
+                            <td id="padding" ><button class="btn_edit_delete"><i class="bi bi-pencil-fill edit"></i></i></button></td>
+                            <td id="padding" ><button class="btn_edit_delete" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-x-lg delete"></i></button></td>
+                            <td>0000000</td>
+                            <td>id do armário</td>
+                            <td>Nome do produto</td>
+                            <td>Descrição</td>
+                            <td>Categoria</td>
+                            <td>Marca</td>
+                            <td>Quantidade total</td>
+                            <td>dd/mm/aaaa</td>
+                            <td>Nome do responsável</td>
+                        </tr>
+                        <tr>
+                            <th id="padding" scope="row"><i class="bi bi-circle-fill orange_circle"></i></th>
+                            <td id="padding" ><button class="btn_edit_delete"><i class="bi bi-pencil-fill edit"></i></i></button></td>
+                            <td id="padding" ><button class="btn_edit_delete" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-x-lg delete"></i></button></td>
+                            <td>0000000</td>
+                            <td>id do armário</td>
+                            <td>Nome do produto</td>
+                            <td>Descrição</td>
+                            <td>Categoria</td>
+                            <td>Marca</td>
+                            <td>Quantidade total</td>
+                            <td>dd/mm/aaaa</td>
+                            <td>Nome do responsável</td>
+                        </tr>
+                        <tr>
+                            <th id="padding" scope="row"><i class="bi bi-circle-fill green_circle"></i></th>
+                            <td id="padding" ><button class="btn_edit_delete"><i class="bi bi-pencil-fill edit"></i></i></button></td>
+                            <td id="padding" ><button class="btn_edit_delete" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-x-lg delete"></i></button></td>
+                            <td>0000000</td>
+                            <td>id do armário</td>
+                            <td>Nome do produto</td>
+                            <td>Descrição</td>
+                            <td>Categoria</td>
+                            <td>Marca</td>
+                            <td>Quantidade total</td>
+                            <td>dd/mm/aaaa</td>
+                            <td>Nome do responsável</td>
+                        </tr>
+                        <tr>
+                            <th id="padding" scope="row"><i class="bi bi-circle-fill red_circle"></i></th>
+                            <td id="padding" ><button class="btn_edit_delete"><i class="bi bi-pencil-fill edit"></i></i></button></td>
+                            <td id="padding" ><button class="btn_edit_delete" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-x-lg delete"></i></button></td>
+                            <td>0000000</td>
+                            <td>id do armário</td>
+                            <td>Nome do produto</td>
+                            <td>Descrição</td>
+                            <td>Categoria</td>
+                            <td>Marca</td>
+                            <td>Quantidade total</td>
+                            <td>dd/mm/aaaa</td>
+                            <td>Nome do responsável</td>
+                        </tr>
+                        <tr>
+                            <th id="padding" scope="row"><i class="bi bi-circle-fill green_circle"></i></th>
+                            <td id="padding" ><button class="btn_edit_delete"><i class="bi bi-pencil-fill edit"></i></i></button></td>
+                            <td id="padding" ><button class="btn_edit_delete" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-x-lg delete"></i></button></td>
+                            <td>0000000</td>
+                            <td>id do armário</td>
+                            <td>Nome do produto</td>
+                            <td>Descrição</td>
+                            <td>Categoria</td>
+                            <td>Marca</td>
+                            <td>Quantidade total</td>
+                            <td>dd/mm/aaaa</td>
+                            <td>Nome do responsável</td>
+                        </tr>
+                        <tr>
+                            <th id="padding" scope="row"><i class="bi bi-circle-fill red_circle"></i></th>
+                            <td id="padding" ><button class="btn_edit_delete"><i class="bi bi-pencil-fill edit"></i></i></button></td>
+                            <td id="padding" ><button class="btn_edit_delete" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-x-lg delete"></i></button></td>
+                            <td>0000000</td>
+                            <td>id do armário</td>
+                            <td>Nome do produto</td>
+                            <td>Descrição</td>
+                            <td>Categoria</td>
+                            <td>Marca</td>
+                            <td>Quantidade total</td>
+                            <td>dd/mm/aaaa</td>
+                            <td>Nome do responsável</td>
+                        </tr>
+                        <tr>
+                            <th id="padding" scope="row"><i class="bi bi-circle-fill green_circle"></i></th>
+                            <td id="padding" ><button class="btn_edit_delete"><i class="bi bi-pencil-fill edit"></i></i></button></td>
+                            <td id="padding" ><button class="btn_edit_delete" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-x-lg delete"></i></button></td>
+                            <td>0000000</td>
+                            <td>id do armário</td>
+                            <td>Nome do produto</td>
+                            <td>Descrição</td>
+                            <td>Categoria</td>
+                            <td>Marca</td>
+                            <td>Quantidade total</td>
+                            <td>dd/mm/aaaa</td>
+                            <td>Nome do responsável</td>
+                        </tr>
+                        <tr>
+                            <th id="padding" scope="row"><i class="bi bi-circle-fill orange_circle"></i></th>
+                            <td id="padding" ><button class="btn_edit_delete"><i class="bi bi-pencil-fill edit"></i></i></button></td>
+                            <td id="padding" ><button class="btn_edit_delete" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-x-lg delete"></i></button></td>
+                            <td>0000000</td>
+                            <td>id do armário</td>
+                            <td>Nome do produto</td>
+                            <td>Descrição</td>
+                            <td>Categoria</td>
+                            <td>Marca</td>
+                            <td>Quantidade total</td>
+                            <td>dd/mm/aaaa</td>
+                            <td>Nome do responsável</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>        
+        </div> 
+    </section>
+
+    <script src="produtos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    
+</body>
+</html>

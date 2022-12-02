@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="img/box-seam.svg"/>
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="login.css">
+</head>
+<body>
+
+    <div class="grid-container">
+        <div class="barra_top_laranja"></div>
+
+        <div class="container">
+            <div class="caixa">
+                <h1>Login</h1>
+                <button id="fechar" onclick="location.href='tela_inicial.html'">X</button>
+
+                <form class="input-group">
+                    <input type="text" id="name" name="username" placeholder="">
+                    <label for="name" >Nome de usuário</label>
+                </form>
+
+                <form class="input-group">
+                    <input type="password" placeholder="" id="senha" name="password">
+                    <label for="senha">Senha</label>
+                </form>
+                
+                <p><a href="" id="button2">Não lembro minha senha</a></p>
+
+                <button type="submit" onclick="login()">Entrar</button>
+   
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="barra_low_laranja"></div>
+            <div class="barra_low_azul"></div>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+* {
+    margin: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 5fr 1fr 1fr;
+    grid-template-areas: 'barra_top_laranja container barra_low_laranja barra_low_azul';
+    color: black;
+    display: inline-block;
+    width: 100%;
+}
+
+.barra_top_laranja {
+    grid-area: barra_top_laranja;
+    background-color: rgba(253, 126, 20, 1);
+    height: 4vh;
+}
+
+.container {
+    grid-area: container;
+}
+
+.barra_low_laranja {
+    grid-area: barra_low_laranja;
+    background-color: rgba(253, 126, 20, 1);
+    height: 4vh;
+}
+
+.barra_low_azul {
+    grid-area: barra_low_azul;
+    background-color: rgb(0, 57, 123);
+    height: 6vh; 
+}
+
+.footer {
+    position: absolute; 
+    width: 100%; 
+    bottom: 0;
+}
+
+.caixa-inicio{
+    background-color: white;
+    width: 800px;
+    height: 65vh;
+    box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.box_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 4vh;
+}
+
+.titulo {
+    text-align: center;
+    padding-top: 5vh;
+}
+
+#botao_PDF {
+    background-color: rgba(0, 58, 123, 1);
+    border-color: rgba(0, 58, 123, 1);   
+}
